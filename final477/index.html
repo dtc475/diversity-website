@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Witch Weather</title>
+    
+    
+    
+    <!-- TEMPLATE BY CORRINE MURPHY AND WILL LUERS, 2015 -->
+    
+ 
+
+<style>
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+
+
+
+    	
+    	
+   #part1 {
+  		position: fixed;
+  		top: -100%;
+  		left: 0%;
+  		width: 100%;
+  		height: 100%;
+  		background: red;
+		} 
+  
+   #part2 {
+  		position: fixed;
+  		top:0%;
+  		left:-100%;
+  		width: 100%;
+  		height: 100%;
+		} 
+		
+   #part3 {
+  		position: fixed;
+  		top:100%;
+  		left:0%;
+  		width: 100%;
+  		height: 100%;
+		} 
+		
+		
+		
+	
+	
+
+ #scrollCount  {
+    	position: fixed;
+		top: 5%;
+		right: 5%;
+    	width: 2em;
+		padding: 2% 8%;
+    	color: white;
+    	background: #931A0B;
+    	z-index: 11;
+    	} 
+
+	
+  	
+  	#gust {
+  		width: 100%;
+  		height: 100%;
+  		background-image: url("img/gust.jpg");
+  		background-size: 100%;
+  		background-repeat: no-repeat;
+  		max-width: 100%;
+		position: fixed;
+		min-height: 360px;
+		z-index: 998;
+  		}
+  		
+  	#gust img {
+  		margin: 0 auto;
+  		margin-top: 20%;
+  		margin-left: 40%;
+  		
+  		}	
+  		
+  		
+  	#home {
+  		width: 100%;
+  		height: 100%;
+  		/*background-image: url("img/howto.jpg");
+  		background-image: url("img/moon.gif");*/
+  		background-color: #000000;
+  		background-size: 100%;
+  		background-repeat: no-repeat;
+  		max-width: 100%;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		min-height: 360px;
+		z-index: 998;
+  		}
+  		
+  	#home img {
+  		margin: 0 auto;
+  		display: block;
+  		margin-top: 20%;
+  		}		
+  		
+  	#moontxt img{
+  		margin: 0 auto;
+  		display: block;
+  		margin-top: 15%;
+  		}
+  		
+  		
+  	#gusttxt {
+  		margin: 0 auto;
+  		display: block;
+  		}	
+	
+  
+ 	
+  		
+  		
+  	#rumblingsky {
+  		width: 100%;
+  		height: 100%;
+  		background-image: url("img/rumblingsky3.gif");
+  		background-size: 100%;
+  		background-repeat: no-repeat;
+  		max-width: 100%;
+		position: fixed;
+		min-height: 360px;
+		z-index: 998;
+		background-size: cover;
+		background-attachment: fixed;
+  		}
+  		
+  	#rumblingsky img {
+  		margin: 0 auto;
+  		margin-top: 20%;
+  		margin-left: 20%;
+  		}	
+  		
+  		
+  		
+  	#rumblingskytxt img {
+  		margin: 0 auto;
+  		}			
+  		
+  	#rumblingtxt {
+  		margin: 0 auto;
+  		display: block;
+  		margin-top: 20%;
+  		margin-left: 20%;
+  		}		
+  		
+
+  		
+  		
+  	#fog {
+  		width: 100%;
+  		height: 100%;
+  		background-image: url("img/fog.jpg");
+  		background-size: 100%;
+  		background-repeat: no-repeat;
+  		max-width: 100%;
+		position: fixed;
+		min-height: 360px;
+		z-index: 998;
+		background-size: cover;
+		background-attachment: fixed;
+  		}
+  		
+  	#fog img {
+  		margin: 0 auto;
+  		}		
+  		
+  	#foggif {
+  		width: 100%;
+  		height: 100%;
+  		background-image: url("img/fog1.gif");
+  		background-size: 100%;
+  		background-repeat: no-repeat;
+  		max-width: 100%;
+		position: fixed;
+		min-height: 360px;
+		z-index: 998;
+		background-size: cover;
+		background-attachment: fixed;
+  		
+  		}
+  		
+  	#foggif img {
+  		margin: 0 auto;
+  		margin-top: 50%;
+  		margin-left: 25%;
+  		}
+  		
+ 	#fogtxt {
+  		margin: 0 auto;
+  		display: block;
+  		margin-top: 15%;
+  		margin-left: 15%;
+  		
+  		}	
+  		
+  	#different {
+  		width: 100%;
+  		height: 100%;
+  		background-image: url("img/different.gif");
+  		background-size: 100%;
+  		z-index: 99;
+  		background-repeat: no-repeat;
+  		max-width: 100%;
+		position: fixed;
+		min-height: 360px;
+		z-index: 998;
+		background-size: cover;
+		background-attachment: fixed;
+  		}
+  		
+  	#different img {
+  		margin: 0 auto;
+  		}	
+  		
+  	#differenttxt {
+  		margin: 0 auto;
+  		display: block;
+  		margin-top: 20%;
+  		margin-left: 20%;
+  		position: absolute;
+  		
+  		}		
+  		
+  	#restlessness {
+  		width: 100%;
+  		height: 100%;
+  		background-image: url("img/restlessness2.jpg");
+  		background-size: 100%;
+  		z-index: 99;
+  		background-repeat: no-repeat;
+  		max-width: 100%;
+		position: fixed;
+		min-height: 360px;
+		z-index: 998;
+		background-size: cover;
+		background-attachment: fixed;
+  		}
+  		
+  	#restlessness img {
+  		margin: 0 auto;
+  		margin-top: 20%;
+  		margin-left: 20%;
+  		}	
+  		
+  	#restlesstxt {
+  		margin: 0 auto;
+  		display: block;
+  		margin-top: 20%;
+  		margin-left: 20%;
+  		position: absolute;
+  		
+  		}		
+  		
+  		
+  	#longing {
+  		width: 100%;
+  		height: 100%;
+  		background-image: url("img/longing.gif");
+  		background-size: 100%;
+  		z-index: 99;
+  		background-repeat: no-repeat;
+  		max-width: 100%;
+		position: fixed;
+		min-height: 360px;
+		z-index: 998;
+		background-size: cover;
+		background-attachment: fixed;
+  		}
+  		
+  	#longing img {
+  		margin: 0 auto;
+  		margin-top: 15%;
+  		margin-left: 20%;
+  		}	
+  		
+  		
+  		
+  		
+  		
+  	#longingtxt {
+  		margin: 0 auto;
+  		display: block;
+  		margin-top: 20%;
+  		margin-left: 20%;
+  		position: absolute;
+  		
+  		}			
+  		
+  		
+  	#magic {
+  		width: 100%;
+  		height: 100%;
+  		background-image: url("img/magic.jpg");
+  		background-size: 100%;
+  		z-index: 99;
+  		background-repeat: no-repeat;
+  		max-width: 100%;
+		position: fixed;
+		min-height: 360px;
+		z-index: 998;
+		background-size: cover;
+		background-attachment: fixed;
+  		}
+  		
+  	#magic img {
+  		margin: 0 auto;
+  		}		
+  		
+  		
+  	#magictxt {
+  		width: 100%;
+  		height: 100%;
+  		background-size: 100%;
+  		z-index: 99;
+  		background-repeat: no-repeat;
+  		max-width: 100%;
+		position: fixed;
+		min-height: 360px;
+		z-index: 998;
+		background-size: cover;
+		background-attachment: fixed;
+  		}
+  		
+  	#magictxt img {
+  		margin: 0 auto;
+  		margin-left: 15%;
+  		margin-top: 5%;
+  		}	
+  		
+ 			
+  	#ancient {
+  		width: 100%;
+  		height: 100%;
+  		background-image: url("img/ancient.jpg");
+  		background-size: 100%;
+  		z-index: 99;
+  		background-repeat: no-repeat;
+  		max-width: 100%;
+		position: fixed;
+		min-height: 360px;
+		z-index: 998;
+		background-size: cover;
+		background-attachment: fixed;
+  		}
+  		
+  	#ancient img {
+  		margin: 0 auto;
+  		margin-left: 3%;
+  		}			
+  		
+  	#lonely {
+  		width: 100%;
+  		height: 100%;
+  		background-image: url("img/lonely.jpg");
+  		background-size: 100%;
+  		z-index: 99;
+  		background-repeat: no-repeat;
+  		max-width: 100%;
+		position: fixed;
+		min-height: 360px;
+		z-index: 998;
+		background-size: cover;
+		background-attachment: fixed;
+  		}
+  		
+  	#lonely img {
+  		margin: 0 auto;
+  		margin-top: 10%;
+  		margin-right: 15%;
+  		margin-left: -10%;
+  		}	
+  		
+  	#lonelyimg {
+  		width: 80%;
+  		height: 80%;
+  		background-size: 100%;
+  		z-index: 99;
+  		background-repeat: no-repeat;
+  		max-width: 100%;
+		position: fixed;
+		min-height: 360px;
+		z-index: 998;
+		background-size: cover;
+		background-attachment: fixed;
+  		}
+  		
+  	#lonelyimg img {
+  		margin: 0 auto;
+  		display: block;
+  		margin-top: 50%;
+  		margin-left: 60%;
+  		}		
+  		
+  		
+  	#lonelytxt {
+  		margin: 0 auto;
+  		display: block;
+  		margin-top: 20%;
+  		margin-left: 20%;
+  		position: absolute;
+  		
+  		}		
+  		
+  		
+  		
+  	#forgotten {
+  		width: 100%;
+  		height: 100%;
+  		background-image: url("img/forgotten.gif");
+  		background-size: 100%;
+  		z-index: 99;
+  		background-repeat: no-repeat;
+  		max-width: 100%;
+		position: fixed;
+		min-height: 360px;
+		z-index: 998;
+		background-size: cover;
+		background-attachment: fixed;
+  		}
+  		
+  	#forgotten img {
+  		margin: 0 auto;
+  		margin-left: 55%;
+  		}		
+  		
+  		
+  	#alive {
+  		width: 100%;
+  		height: 100%;
+  		background-image: url("img/alive.jpg");
+  		background-size: 100%;
+  		z-index: 99;
+  		background-repeat: no-repeat;
+  		max-width: 100%;
+		position: fixed;
+		min-height: 360px;
+		z-index: 998;
+		background-size: cover;
+		background-attachment: fixed;
+  		}
+  		
+  	#alive img {
+  		margin: 0 auto;
+  		}
+  				
+  		
+				
+  		
+  	 #everlasting {
+  		width: 100%;
+  		height: 100%;
+  		background-image: url("img/everlasting.gif");
+  		background-size: 100%;
+  		z-index: 99;
+  		background-repeat: no-repeat;
+  		max-width: 100%;
+		position: fixed;
+		min-height: 360px;
+		z-index: 998;
+		background-size: cover;
+		background-attachment: fixed;
+  		}
+  		
+  	#everlasting img {
+  		margin: 0 auto;
+  		margin-left: 10%;
+  		margin-top: 20%;
+  		}	
+  		
+	#footer{
+  		width: 100%;
+  		height: 100%;
+  		background-color: white;
+  		background-size: 100%;
+  		z-index: 99;
+  		background-repeat: no-repeat;
+  		max-width: 100%;
+		position: fixed;
+		min-height: 360px;
+		z-index: 998;
+		background-size: cover;
+		background-attachment: fixed;
+  		}
+  		
+    #footer h1 {
+  		max-width: 20%;
+  		margin-top: 20%;
+  		margin-left:40%;
+  		font-size: 2em;
+  		font-family: georgia;
+  		
+  		}		
+  		
+  	#footer p {
+  		max-width: 50%;
+  		margin: 0 auto;
+  		padding-top: 2%;
+  		font-size: 1.1em;
+  		
+  		}	
+
+  		
+  
+  	
+</style>
+
+</head>
+  
+ <!--Data points below control background color changes (green, pink, blue, purple) 15400 pixels to 17500 pixels--> 
+<body 
+	data-0="background-color: none;" 
+	data-7500="background-color: none;" 
+	data-10000="background-color: none;" 
+	>
+
+<!--<div id="scrollCount">0</div>-->
+
+<!--SLIDE 1-->
+
+<div id="wrapper">
+	<div id="part1" data-start="top: 0;opacity:1;" data-100-start="left:0%;" data-500="" data-100-end="bottom:-100%;opacity:0">
+		<div id="home">
+			<div moon>
+				<img src="img/moon.gif" alt="moon">
+					<div id ="moontxt">
+						<img src="img/wwtext.png" alt="witch weather">
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+<!--SLIDE 2-->
+<div id="part1" data-600="top:-100%;opacity:1;" data-1500="top:0%;" data-2500="" data-3500="top:100%;opacity:1">
+	<div id="gust">
+		<div gusttxt>
+				<img src="img/gusttxt.png" alt="text">
+			</div>
+			
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+<!--SLIDE 3-->
+<div id="part1" data-2500="top:-100%;opacity:1;" data-3500="top:0%;" data-4500="" data-5500="top:100%;opacity:1">
+	<div id="rumblingsky">
+		<div id="rumblingtxt">
+				<img src="img/rumblingtxt.png" alt="text">
+			</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!--SLIDE 4-->
+<div id="part1" data-4500="top:-100%;opacity:1;" data-5500="top:0%;" data-7500="" data-8000="top:100%;opacity:0">
+	<div id="fog">
+		
+	
+	</div>
+</div>
+
+<div id="part1" data-4500="top:-100%;opacity:0;" data-5500="top:0%;opacity:0.4;" data-7500="" data-8000="top:100%;opacity:0">
+	<div id="foggif">
+		<div id="fogtxt">
+		<img src="img/fogtxt.png" alt="text">
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!--SLIDE 5-->
+<div id="part1" data-7000="top:-100%;opacity:1;" data-7500="top:0%;" data-8000="" data-9500="top:100%;opacity:">
+	<div id="different">
+	<div id="differenttxt">
+		<img src="img/differenttxt.png" alt="text">
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--SLIDE 6-->
+<div id="part1" data-8000="top:-100%;opacity:1;" data-9000="top:0%;opacity:1" data-11000="" data-12000="top:100%;opacity:0">
+	<div id="restlessness">
+	</div>
+</div>
+
+
+<div id="part1" data-8000="top:100%;opacity:0;" data-9000="top:0%;opacity:1" data-11000="" data-12000="top:100%;opacity:1">
+	<div id="restlessness">
+		<div id ="restlessnessimg">
+						<img src="img/restlessness1.png" alt="restless img">
+					</div>	
+				
+					
+	
+	</div>
+</div>
+
+
+
+
+
+<!--SLIDE 7-->
+
+<div id="part1" data-11000="top:-100%;opacity:0;" data-12000="top:0%;opacity:1" data-13000="" data-14000="top:100%;opacity:0">
+	<div id="longing">
+		<div id ="longingtxt">
+			<img src="img/longingtxt.png">
+		</div>
+	
+	</div>
+</div>
+
+
+
+
+
+<!--SLIDE 8-->
+
+<div id="part1" data-13000="top:-100%;opacity:0;" data-14000="top:0%;opacity:1" data-15000="" data-16000="top:100%;opacity:0">
+	<div id="magic">
+		<div id="magictxt">
+		<img src="img/magictxt.png" alt="text">
+		
+	</div>
+	
+	</div>
+</div>
+
+
+
+
+
+<!--SLIDE 9-->
+<div id="part1" data-15000="top:-100%;opacity:1;" data-16000="top:0%;opacity:1" data-17000="" data-18000="top:100%;opacity:1">
+	<div id="ancient">
+		<div id="ancienttxt">
+			<img src="img/ancienttxt.png">
+		</div>
+	
+	</div>
+</div>
+
+
+
+<!--SLIDE 10-->
+<div id="part1" data-17000="top:-100%;opacity:0;" data-18000="top:0%;opacity:1" data-19000="" data-20000="top:100%;opacity:1">
+	<div id="lonely">
+		<div id ="lonelyimg">
+						<img src="img/lonely3.png" alt="lonely img">
+		</div>
+		<div id ="lonelytxt">
+				<img src="img/lonelytxt.png">
+		</div>	
+	
+	</div>
+</div>
+
+
+
+
+<!--SLIDE 11-->
+<div id="part1" data-19000="top:-100%;opacity:0;" data-20000="top:0%;opacity:1" data-21000="" data-22000="top:100%;opacity:1">
+	<div id="forgotten">
+		<div id="forgottentxt">
+				<img src="img/forgottentxt.png">
+		</div>
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+<!--SLIDE 12-->
+
+<div id="part1" data-21000="top:-100%;opacity:0;" data-22000="top:0%;opacity:1" data-23000="" data-24000="top:100%;opacity:1">
+	<div id="alive">
+		<div id="alivetxt">
+			<img src="img/alivetxt.png">
+		</div>
+		
+	
+	</div>
+</div>
+
+
+
+
+
+
+<!--SLIDE 13-->
+<div id="part1" data-23000="top:-100%;opacity:1;" data-24000="top:0%;opacity:1" data-25000="" data-26000="top:0%;opacity:0">
+	<div id="everlasting">
+		<div id="everlastingtxt">
+			<img src="img/everlastingtxt.png">
+		</div>
+		
+	
+	</div>
+</div>
+
+<!--FOOTER-->
+
+<div id="part1" data-25000="top:-100%;opacity:1;" data-26000="top:0%;opacity:1" data-26000="" data-27000="top:0%;opacity:1">
+	<div id="footer">
+		<h1>Lindsey Parker</h1>
+		<p>This narrative project was inspired by one of my favorite poems, entitled 'Witch Weather' by Anonymous. It was originally meant to invoke feelings of spookiness (it was Halloween when I started this project, no judgement). As always Skrollr deserves a good punch to the face. Also, this project is best viewed using Google Chrome, as I must have somehow offended a fire fox in a past life.</p>
+		
+		
+	
+	</div>
+</div>
+
+
+
+
+    
+<!-- jQuery / plugins -->
+ <script src="jquery.js" type="text/javascript"></script>
+ <script src="jquery.touchSwipe.min.js"></script>
+ <script type="text/javascript" src="skrollr.min.js"></script>
+
+
+
+  <script>
+  
+// jQuery
+
+$(document).ready(function() {
+
+	 /// scroll counter
+	 
+	 $(window).scroll(function() {
+	var scrollTop = $(window,'html, body').scrollTop();
+		$('#scrollCount').html(scrollTop);
+		});
+
+
+
+	
+$(window).load(function(){
+   
+// IMPORTANT FOR SKROLLR - initiates plugin
+	var s = skrollr.init();  // close skrollr init
+
+});  //closes window load function
+
+
+	///audio jquery
+
+
+$("#button").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#gust").offset().top
+    }, 2000);
+});
+	
+
+$(window).load(function() {
+  $("html, body").animate({ scrollTop: $(document).height() }, 60000);
+});
+
+    
+    
+   }); //end doc ready 
+   
+
+ </script>
+
+
+  </body>
+</html>

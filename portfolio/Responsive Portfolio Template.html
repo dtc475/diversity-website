@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<!-- This is an HTML comment -->
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Responsive Portfolio Template</title>
+	
+	<style>
+	/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
+	html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {	
+	margin: 0;	
+	padding: 0;	
+	border: 0;	
+	font-size: 100%;	
+	font: inherit;	
+	vertical-align: baseline;}
+	
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	
+	display: block;}
+	
+	body {	
+	line-height: 1.5;
+	}
+	
+	ol, ul {	
+	list-style: none;
+	}
+	
+	blockquote, q {	
+	quotes: none;
+	}
+	
+	blockquote:before, blockquote:after,q:before, q:after {	
+	content: '';	
+	content: none;
+	}
+	
+	table {	
+	border-collapse: collapse;	border-spacing: 0;
+	}	
+	
+	/* end reset*/
+	
+
+
+
+
+	/* default styles (all device widths, but designed for mobile phone)*/
+	 body  {
+	 	margin: 0;
+	 	padding: 0;
+	 }
+	 
+	 #wrapper  {
+	 	width: 100%;
+	 	margin: 1% auto;
+	 	border: 1px solid pink;
+	 }
+	
+	 header {
+	 	border: 1px solid green;
+	 	margin-bottom: 2%;
+	 }
+	 
+	 /* below are the mobile styles (size, color, link styles) for the navbar using the nav element */
+	 
+	  nav {
+	 	border: 1px solid orange;
+	 	margin-bottom: 2%;
+	 	display: block;
+	 	width: 99%;
+	 	margin: 0 auto;
+	  }
+	  
+	  nav li a {
+	 	display: block;
+	 	width: 99%;
+	 	color: white;
+	 	margin:.5% auto;
+	 	background: red;
+	 	text-align: center;
+	 	padding: .5%;
+	 	border: 1px solid black;
+	  }
+	  
+	  
+	  nav li:last-child  {
+	   margin: 0;
+	  }
+	  
+	  nav li a:link, nav li a:visited {
+	    background: red;
+	    color: white;
+	    text-decoration: none;
+	  }
+	  
+	  nav li a:hover, nav li a:focus {
+	    background: orange;
+	  }
+	 
+	 h1 {
+	 	border: 1px solid red;
+	 	text-align: center;
+	 	font-size: 2.5em;
+	 	}
+	 
+	 #description {
+	 	border: 1px solid blue;
+	 	width: 60%;
+	 	margin: 1% auto;
+	 	}
+	 
+	#section1 {
+		border: 1px solid brown;
+		margin-bottom: 2%;
+		padding: 1%;
+		}
+		
+	
+	#section2  {
+		border: 1px solid purple;
+		margin-bottom: 2%;
+		padding: 1%;
+		}
+		
+	#section3  {
+		border: 1px solid yellow;
+		margin-bottom: 2%;
+		padding: 1%;
+		}
+		
+	
+	footer {
+		border: 1px solid orange;
+		clear: both;
+		text-align: center;
+		}
+	
+	.clear  {
+		clear: both;
+		}
+		
+	 img {
+	 	width: 100%;
+	 	}
+		
+	/* tablet styles */
+	@media only screen and (min-width: 500px) and (max-width: 700px) {
+	   
+	   /* below are the tablet styles for the navbar. <li> are floated left*/
+	   
+		nav  li a {
+	 	display: block;
+	 	float: left;
+	 	width: 17.5%;
+	 	color: white;
+	 	margin: 0 .5%;
+	 	background: red;
+	 	text-align: center;
+	 	padding: .5%;
+	 	border: 1px solid black;
+	  }
+	
+
+	}   /*closes tablet media queries*/
+	
+	
+	/* desktop styles */
+	@media only screen and (min-width: 701px) {
+	
+	#wrapper  {
+	 	width: 80%;
+	 	max-width: 900px;
+	 	margin: 1% auto;
+	 }	
+	
+	/* here is the desktop styles for the navbar. <li> are floated left*/
+	
+	nav li a {
+	 	display: block;
+	 	float: left;
+	 	width: 17.5%;
+	 	color: white;
+	 	margin: 0 .5%;
+	 	background: red;
+	 	text-align: center;
+	 	padding: .5%;
+	 	border: 1px solid black;
+	  }
+	
+	}  /*closes desktop media queries*/
+		
+	</style>
+	
+</head>
+<body>
+	<div id="wrapper">
+	<header>
+	<h1>Your Name</h1>
+	<p id="description">Something about you to catch attention...</p>
+	</header>
+	
+  <!-- below is the html for the navbar. it is just an unordered list with <a> links inside the <li> elements. after that that is empty div with a class clear to let the nav enclose the list -->
+	
+	<nav>
+		<ul>
+			<li><a href="#">Link 1</a></li>
+			<li><a href="#">Link 2</a></li>
+			<li><a href="#">Link 3</a></li>
+			<li><a href="#">Link 4</a></li>
+			<li><a href="#">Link 5</a></li>
+		</ul>
+		<div class="clear"></div>
+	</nav>
+	
+	
+	<div id="section1">
+	 <img src="https://research.vancouver.wsu.edu/sites/research.vancouver.wsu.edu/files/WSUV0003.jpg">
+	 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin posuere nunc placerat mattis. Nam mattis pharetra augue. Nam mollis tempus massa, eu malesuada lectus aliquet nec. Curabitur rutrum varius purus, in aliquam eros. Curabitur consectetur, libero gravida consectetur dictum, orci tellus tempor nisi, quis porttitor ex risus quis sem. Cras molestie faucibus ex ut pretium. Morbi ut ex vitae augue porta consectetur rutrum a nisi. Mauris ut elit ligula. Curabitur tincidunt ante vel augue consequat, quis eleifend massa viverra. Aenean imperdiet dolor lorem, ut bibendum eros porttitor vitae. In at leo mollis, lobortis augue vel, gravida orci. Pellentesque id diam ornare, aliquam nisl vel, porttitor ante. Nunc id mi ut libero viverra aliquam rutrum et metus.
+	 </p>
+
+	</div>
+	
+	
+	
+	<div id="section2">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin posuere nunc placerat mattis. Nam mattis pharetra augue. Nam mollis tempus massa, eu malesuada lectus aliquet nec. Curabitur rutrum varius purus, in aliquam eros. Curabitur consectetur, libero gravida consectetur dictum, orci tellus tempor nisi, quis porttitor ex risus quis sem. Cras molestie faucibus ex ut pretium. Morbi ut ex vitae augue porta consectetur rutrum a nisi. Mauris ut elit ligula. Curabitur tincidunt ante vel augue consequat, quis eleifend massa viverra. Aenean imperdiet dolor lorem, ut bibendum eros porttitor vitae. In at leo mollis, lobortis augue vel, gravida orci. Pellentesque id diam ornare, aliquam nisl vel, porttitor ante. Nunc id mi ut libero viverra aliquam rutrum et metus.
+	 </p>
+	</div>
+	
+	
+	
+	<div id="section3">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin posuere nunc placerat mattis. Nam mattis pharetra augue. Nam mollis tempus massa, eu malesuada lectus aliquet nec. Curabitur rutrum varius purus, in aliquam eros. Curabitur consectetur, libero gravida consectetur dictum, orci tellus tempor nisi, quis porttitor ex risus quis sem. Cras molestie faucibus ex ut pretium. Morbi ut ex vitae augue porta consectetur rutrum a nisi. Mauris ut elit ligula. Curabitur tincidunt ante vel augue consequat, quis eleifend massa viverra. Aenean imperdiet dolor lorem, ut bibendum eros porttitor vitae. In at leo mollis, lobortis augue vel, gravida orci. Pellentesque id diam ornare, aliquam nisl vel, porttitor ante. Nunc id mi ut libero viverra aliquam rutrum et metus.
+	 </p>
+	</div>
+	
+	
+	
+	<footer>
+	name, contact, etc.
+	</footer>
+	
+	</div> <!-- close wrapper -->
+	
+</body>
+</html>
