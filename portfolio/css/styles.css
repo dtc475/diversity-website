@@ -79,7 +79,7 @@ hr {
 		}
 
 	body { 
-		font: normal 1em/1.5em 'Open Sans', sans-serif; 
+		font: normal 1em/1.5em 'Ovo', sans-serif; 
 		color: #333; 
 		margin-bottom: 20px; 
 		}
@@ -96,7 +96,14 @@ hr {
 
 	
 	h1 { 	
-		font: bold 3.8em 'Amatic SC', cursive; 
+		font: bold 3.8em 'Josefin Sans', sans-serif; 
+		}
+		
+	h2 {
+		font-family: 'Josefin Sans', sans-serif;
+		font-size: 2.5em;
+    	margin: 0 auto;
+    	max-width: 10%;
 		}
 
 	header {
@@ -123,23 +130,21 @@ hr {
 		border: 1px solid #fff;
 		}
 
-	header nav ul li a:hover, header nav ul li a.active { 
-		background: #f7f7f7; 
-		color: #b2c3e8; 
+	header nav ul li a:hover { 
+		background: #8C3248; 
+		color: #f7f7f7; 
 		border: 1px solid #eee;
 		}
 		
-	#h3main {
-		font-family: 'Karla', sans-serif;
-		font-size: 25px;
-		margin-left: auto;
-    	margin-right: auto;
-    	margin: 0 auto;
-    	width: 80%;
+	#focus { 
+		background: #8C3248;
+		padding: 10px; 
+		color: #f7f7f7; 
+		border: 1px solid #eee;
 		}	
 		
-	#h3contact {
-		font-family: 'Karla', sans-serif;
+	/* #h3contact {
+		font-family: 'Josefin Sans', sans-serif;
 		font-size: 25px;
 		margin-left: auto;
     	margin-right: auto;
@@ -148,7 +153,7 @@ hr {
 		}
 		
 	#h3graphic {
-		font-family: 'Karla', sans-serif;
+		font-family: 'Josefin Sans', sans-serif;
 		font-size: 25px;
 		margin-left: auto;
     	margin-right: auto;
@@ -157,7 +162,7 @@ hr {
 		}	
 		
 	#h3webdesign {
-		font-family: 'Karla', sans-serif;
+		font-family: 'Josefin Sans', sans-serif;
 		font-size: 25px;
 		margin-left: auto;
     	margin-right: auto;
@@ -167,16 +172,16 @@ hr {
 						
 		
 	#h3writing {
-		font-family: 'Karla', sans-serif;
+		font-family: 'Josefin Sans', sans-serif;
 		font-size: 25px;
 		margin-left: auto;
     	margin-right: auto;
     	margin: 0 auto;
     	width: 28%;
-		}		
+		}	*/	
 			
 	h3 {
-		font-family: 'Karla', sans-serif;
+		font-family: 'Josefin Sans', sans-serif;
 		font-size: 25px;
 		margin-left: auto;
     	margin-right: auto;
@@ -244,7 +249,7 @@ hr {
 		font-size: 7em;
 		margin-top: 100px;
 		letter-spacing: 0.05em;
-		font-family: 'Amatic SC', cursive;
+		font-family: 'Josefin Sans', sans-serif;
 		text-shadow: 0 2px 10px #000;
 		-webkit-animation-delay: 1s;
 		-moz-animation-delay: 1s;
