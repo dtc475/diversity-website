@@ -61,7 +61,7 @@ hr {
 		}
 
 	body { 
-		font: normal 1em/1.5em 'Ovo', sans-serif; 
+		font: normal 1em/1.5em 'Georgia', sans-serif; 
 		color: #3C1422; 
 		/* background: url("../img/bg-bar.png") repeat-x top; */
 		}
@@ -99,22 +99,6 @@ hr {
 	#int-nav a {
 		text-decoration: none;
 		}
-	
-	/* button a:link {
-		background-color: #F7F7F7;
-		color: #7C1024;
-		text-decoration: none; 
-		}
-	
-	button a:hover{
-		color: #7C1024;
-		text-decoration: none; 
-		}
-	
-	button a:visited {
-		color: #7C1024;
-		text-decoration: none; 
-		} */
 
 	h1,h2,h3,h4,h5,h6 {
 		font-family: 'Economica', sans-serif;
@@ -147,7 +131,7 @@ hr {
 		}
 		
 	h5 {
-		margin-top: 3.5em;
+		margin-top: 3em;
 		font-size: 1.2em;
 		}
 		
@@ -183,6 +167,11 @@ hr {
 		
 	.italic {
 		font-style: italic;
+		}
+		
+	.profilephoto {
+		float: left;
+		margin: 1em 1em 0em 0em;
 		}
 		
 	nav ul {
@@ -356,6 +345,41 @@ hr {
 	   border-top-color: #1b435e;
 	   background: #1b435e;
 	   }
+	   
+	.nextbutton {
+	   border: none;
+	   background: #f7f7f7;
+	   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f7f7f7));
+	   background: -webkit-linear-gradient(top, #ffffff, #f7f7f7);
+	   background: -moz-linear-gradient(top, #ffffff, #f7f7f7);
+	   background: -ms-linear-gradient(top, #ffffff, #f7f7f7);
+	   background: -o-linear-gradient(top, #ffffff, #f7f7f7);
+	   padding: 10.5px 21px;
+	   -webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	   border-radius: 2px;
+	   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	   box-shadow: rgba(0,0,0,1) 0 1px 0;
+	   color: #7c1024;
+	   font-size: 15px;
+	   font-family: Georgia, Serif;
+	   text-decoration: none;
+	   vertical-align: middle;
+	   cursor: pointer;
+	   margin: 3em 30%;
+	   }
+	   
+	.nextbutton:hover {
+	   border-top-color: #7c1024;
+	   background: #7c1024;
+	   color: #f7f7f7;
+	   }
+	   
+	.nextbutton:active {
+	   border-top-color: #1b435e;
+	   background: #1b435e;
+	   }
 		
 	#int-nav {
 		float: right;
@@ -410,6 +434,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efebea', end
 		float: none;
 		text-align: center;
 		}
+		
+	.nextbutton {
+		margin: 3em 20%;
+		}
 }
 
 /* mobile landscape styles */
@@ -457,5 +485,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efebea', end
 		-webkit-column-gap: 20px;
 		column-count: 1;
 		column-gap: 20px;
+		}
+		
+	.nextbutton {
+		margin: 3em 10%;
 		}
 }
