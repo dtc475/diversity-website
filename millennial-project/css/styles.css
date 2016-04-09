@@ -132,11 +132,16 @@ hr {
 		
 	h5 {
 		margin-top: 3em;
-		font-size: 1.2em;
+		font-size: 1.3em;
 		}
 		
 	h6 {
-		font-size: 1.1em;
+		font-size: 1.3em;
+		}
+		
+	/* specific to h6 tags on about page */
+	.tabletfix {
+		min-width: 350px;
 		}
 
 	header {
@@ -171,7 +176,10 @@ hr {
 		
 	.profilephoto {
 		float: left;
-		margin: 1em 1em 0em 0em;
+		width: 200px;
+		height: 225px;
+		margin: 0em 1em 0em 0em;
+		border: 2px solid #93C5C6;
 		}
 		
 	nav ul {
@@ -258,7 +266,6 @@ hr {
 		display: block;
 		}
 		
-		
 	.twocol p {
 		-moz-column-count: 2;
 		-moz-column-gap: 20px;
@@ -268,21 +275,8 @@ hr {
 		column-gap: 20px;
 		}
 		
-	#interactable {
-		
-	/* background-color: rgba(199,218,210,0.9); */
-		width: 100%;
-		-webkit-border-radius: 5px 5px 5px 5px;
-		border-radius: 5px 5px 5px 5px;
-		box-shadow:0px 2px 10px #798C81;
-		background: #d3e5df; /* Old browsers */
-		background: -moz-linear-gradient(top, #d3e5df 0%, #c7dad2 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d3e5df), color-stop(100%,#c7dad2)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top, #d3e5df 0%,#c7dad2 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top, #d3e5df 0%,#c7dad2 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top, #d3e5df 0%,#c7dad2 100%); /* IE10+ */
-		background: linear-gradient(to bottom, #d3e5df 0%,#c7dad2 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3e5df', endColorstr='#c7dad2',GradientType=0 ); /* IE6-9 */
+	.aboutsections {
+		margin-top: 5em;
 		}
 		
 	#socialmedia {
