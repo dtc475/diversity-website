@@ -61,7 +61,7 @@ hr {
 		}
 
 	body { 
-		font: normal 1em/1.5em 'Georgia', sans-serif; 
+		font: normal 1.1em 'Georgia', sans-serif; 
 		color: #3C1422; 
 		/* background: url("../img/bg-bar.png") repeat-x top; */
 		}
@@ -107,7 +107,7 @@ hr {
 		}
 	
 	h1 { 	
-		font: 3.8em 'Economica', sans-serif; 
+		font: 4.2em 'Economica', sans-serif; 
 		}
 		
 	h2 {
@@ -363,7 +363,7 @@ hr {
 	   text-decoration: none;
 	   vertical-align: middle;
 	   cursor: pointer;
-	   margin: 3em 30%;
+	   margin: 3em 10%;
 	   }
 	   
 	.nextbutton:hover {
@@ -432,7 +432,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efebea', end
 		}
 		
 	.nextbutton {
-		margin: 3em 20%;
+		margin: 3em 10%;
 		}
 }
 
