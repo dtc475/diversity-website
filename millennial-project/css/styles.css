@@ -138,6 +138,7 @@ hr {
 		
 	h6 {
 		font-size: 1.3em;
+		text-indent: 1.5em;
 		}
 		
 	/* specific to h6 tags on about page */
@@ -152,7 +153,6 @@ background: -moz-linear-gradient(top,  rgba(239,235,234,1) 0%, rgba(247,247,247,
 background: -webkit-linear-gradient(top,  rgba(239,235,234,1) 0%,rgba(247,247,247,0.7) 60%,rgba(255,255,255,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom,  rgba(239,235,234,1) 0%,rgba(247,247,247,0.7) 60%,rgba(255,255,255,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efebea', endColorstr='#80ffffff',GradientType=0 ); /* IE6-9 */
-
 		}
 
 	header h1 {
@@ -207,6 +207,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efebea', end
 		background: #7C1024;
 		padding: 10px; 
 		color: #f7f7f7;
+		}
+		
+	blockquote {
+		margin: 0 10%;
 		}
 			
 	.clearfix {
@@ -263,6 +267,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efebea', end
 		font-style: italic;
 		padding-left: 2.5em;
 		margin: 1em 0 2em 0;
+		text-align: center;
+		display: block;
+		}
+		
+	#imgnote {
+		font-size: 0.8em;
+		font-style: italic;
+		margin: 1em auto;
 		text-align: center;
 		display: block;
 		}
@@ -431,7 +443,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efebea', end
 		float: none;
 		margin: 1em auto;
 		display: block;
-		width: 100%;
+		width: 90%;
 		height: 260px;
 		}
 	
